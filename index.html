@@ -59,39 +59,15 @@
       >
         <a href="index.html" class="logo d-flex align-items-center">
           <img src="assets/img/logo.png" alt="Bon Berger Logo" />
-          <h1 class="sitename">Bon Berger</h1>
+          <h1 class="sitename">C.E.P.R</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="about.html">Notre Histoire</a></li>
-            <li><a href="services.html">Nos Cultes</a></li>
-            <li><a href="events.html">Événements</a></li>
-            <li><a href="sermons.html">Sermons</a></li>
-            <li class="dropdown">
-              <a href="#"
-                ><span>Ressources</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="studies.html">Études Bibliques</a></li>
-                <li class="dropdown">
-                  <a href="#"
-                    ><span>Groupes</span>
-                    <i class="bi bi-chevron-down toggle-dropdown"></i
-                  ></a>
-                  <ul>
-                    <li><a href="youth.html">Jeunesse</a></li>
-                    <li><a href="women.html">Femmes</a></li>
-                    <li><a href="men.html">Hommes</a></li>
-                    <li><a href="children.html">Enfants</a></li>
-                  </ul>
-                </li>
-                <li><a href="testimonies.html">Témoignages</a></li>
-                <li><a href="gallery.html">Galerie</a></li>
-              </ul>
-            </li>
+            <li><a href="evenement.html">Événements</a></li>
+            <li><a href="contact.html">Sermons</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -203,351 +179,106 @@
       <!-- /Hero Section -->
 
       <!-- Services Section -->
-      <section
-        id="services-carousel"
-        class="services-carousel section dark-background"
-      >
-        <div class="container section-title" data-aos="fade-up">
-          <h2 class="display-4 fw-bold text-white">
-            Nos Ministères et Activités
-          </h2>
-          <p class="lead text-white-50">
-            Découvrez comment nous servons Dieu et notre communauté
+     <section id="ministries" class="section py-5 dark-background">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title text-center mb-5">
+      <h2 class="display-4 fw-bold text-white">Nos Ministères et Activités</h2>
+      <p class="lead text-white-50">
+        Découvrez comment nous servons Dieu et notre communauté
+      </p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark">
+          <div class="icon mb-3">
+            <i class="bi bi-book display-4 text-primary"></i> </div>
+          <h4 class="title mb-2">
+            <a href="services-details.html" class="stretched-link text-dark">Cultes et Enseignements</a>
+          </h4>
+          <p class="description text-muted">
+            Participez à nos cultes inspirants et nos enseignements
+            bibliques pour grandir dans la foi.
           </p>
         </div>
-        <div class="container">
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "navigation": {
-                  "nextEl": ".js-custom-next",
-                  "prevEl": ".js-custom-prev"
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 1,
-                    "spaceBetween": 20
-                  },
-                  "768": {
-                    "slidesPerView": 2,
-                    "spaceBetween": 30
-                  },
-                  "1200": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 40
-                  }
-                }
-              }
-            </script>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div
-                  class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark"
-                >
-                  <div class="icon mb-3">
-                    <i class="bi bi-book display-4 text-primary"></i>
-                  </div>
-                  <h4 class="title mb-2">
-                    <a
-                      href="services-details.html"
-                      class="stretched-link text-dark"
-                      >Cultes et Enseignements</a
-                    >
-                  </h4>
-                  <p class="description text-muted">
-                    Participez à nos cultes inspirants et nos enseignements
-                    bibliques pour grandir dans la foi.
-                  </p>
-                </div>
-              </div>
+      </div>
 
-              <div class="swiper-slide">
-                <div
-                  class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark"
-                >
-                  <div class="icon mb-3">
-                    <i class="bi bi-people display-4 text-primary"></i>
-                  </div>
-                  <h4 class="title mb-2">
-                    <a
-                      href="services-details.html"
-                      class="stretched-link text-dark"
-                      >Groupes de Maison</a
-                    >
-                  </h4>
-                  <p class="description text-muted">
-                    Rejoignez un petit groupe pour la prière, le partage et la
-                    communion fraternelle.
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div
-                  class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark"
-                >
-                  <div class="icon mb-3">
-                    <i class="bi bi-calendar-event display-4 text-primary"></i>
-                  </div>
-                  <h4 class="title mb-2">
-                    <a
-                      href="services-details.html"
-                      class="stretched-link text-dark"
-                      >Événements Communautaires</a
-                    >
-                  </h4>
-                  <p class="description text-muted">
-                    Découvrez nos événements spéciaux, concerts, conférences et
-                    rassemblements.
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div
-                  class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark"
-                >
-                  <div class="icon mb-3">
-                    <i class="bi bi-hand-heart display-4 text-primary"></i>
-                  </div>
-                  <h4 class="title mb-2">
-                    <a
-                      href="services-details.html"
-                      class="stretched-link text-dark"
-                      >Ministère d'Aide Sociale</a
-                    >
-                  </h4>
-                  <p class="description text-muted">
-                    Nous aidons les personnes dans le besoin à Goma, en offrant
-                    soutien et ressources.
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div
-                  class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark"
-                >
-                  <div class="icon mb-3">
-                    <i class="bi bi-person-check display-4 text-primary"></i>
-                  </div>
-                  <h4 class="title mb-2">
-                    <a
-                      href="services-details.html"
-                      class="stretched-link text-dark"
-                      >Accompagnement Pastoral</a
-                    >
-                  </h4>
-                  <p class="description text-muted">
-                    Recevez conseil, soutien et prière de nos pasteurs et
-                    leaders.
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div
-                  class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark"
-                >
-                  <div class="icon mb-3">
-                    <i class="bi bi-cross display-4 text-primary"></i>
-                  </div>
-                  <h4 class="title mb-2">
-                    <a
-                      href="services-details.html"
-                      class="stretched-link text-dark"
-                      >Ministère de Guérison & Délivrance</a
-                    >
-                  </h4>
-                  <p class="description text-muted">
-                    Des moments dédiés à la prière pour la guérison, la
-                    restauration et la liberté spirituelle.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <button class="navigation-prev js-custom-prev">
-              <i class="bi bi-arrow-left-short"></i>
-            </button>
-            <button class="navigation-next js-custom-next">
-              <i class="bi bi-arrow-right-short"></i>
-            </button>
+      <div class="col" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark">
+          <div class="icon mb-3">
+            <i class="bi bi-people display-4 text-primary"></i>
           </div>
-        </div>
-      </section>
-      <!-- /Services Section -->
-      <section id="services" class="services section light-background">
-        <div class="container section-title" data-aos="fade-up">
-          <h2 class="display-4 fw-bold">Nos Ministères et Activités</h2>
-          <p class="lead text-muted">
-            Découvrez comment nous servons Dieu et notre communauté
+          <h4 class="title mb-2">
+            <a href="services-details.html" class="stretched-link text-dark">Groupes de Maison</a>
+          </h4>
+          <p class="description text-muted">
+            Rejoignez un petit groupe pour la prière, le partage et la
+            communion fraternelle.
           </p>
         </div>
-        <div class="container">
-          <div class="row gy-4 justify-content-center">
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div
-                class="service-card h-100 text-center p-4 shadow-sm rounded-3"
-              >
-                <div class="icon mb-3">
-                  <i class="bi bi-book display-4 text-primary"></i>
-                </div>
-                <h4 class="title mb-2">
-                  <a
-                    href="services-details.html"
-                    class="stretched-link text-dark"
-                    >Cultes et Enseignements</a
-                  >
-                </h4>
-                <p class="description text-muted">
-                  Participez à nos cultes inspirants et nos enseignements
-                  bibliques pour grandir dans la foi.
-                </p>
-              </div>
-            </div>
+      </div>
 
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                class="service-card h-100 text-center p-4 shadow-sm rounded-3"
-              >
-                <div class="icon mb-3">
-                  <i class="bi bi-people display-4 text-primary"></i>
-                </div>
-                <h4 class="title mb-2">
-                  <a
-                    href="services-details.html"
-                    class="stretched-link text-dark"
-                    >Groupes de Maison</a
-                  >
-                </h4>
-                <p class="description text-muted">
-                  Rejoignez un petit groupe pour la prière, le partage et la
-                  communion fraternelle.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div
-                class="service-card h-100 text-center p-4 shadow-sm rounded-3"
-              >
-                <div class="icon mb-3">
-                  <i class="bi bi-calendar-event display-4 text-primary"></i>
-                </div>
-                <h4 class="title mb-2">
-                  <a
-                    href="services-details.html"
-                    class="stretched-link text-dark"
-                    >Événements Communautaires</a
-                  >
-                </h4>
-                <p class="description text-muted">
-                  Découvrez nos événements spéciaux, concerts, conférences et
-                  rassemblements.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div
-                class="service-card h-100 text-center p-4 shadow-sm rounded-3"
-              >
-                <div class="icon mb-3">
-                  <i class="bi bi-hand-heart display-4 text-primary"></i>
-                </div>
-                <h4 class="title mb-2">
-                  <a
-                    href="services-details.html"
-                    class="stretched-link text-dark"
-                    >Ministère d'Aide Sociale</a
-                  >
-                </h4>
-                <p class="description text-muted">
-                  Nous aidons les personnes dans le besoin à Goma, en offrant
-                  soutien et ressources.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div
-                class="service-card h-100 text-center p-4 shadow-sm rounded-3"
-              >
-                <div class="icon mb-3">
-                  <i class="bi bi-person-check display-4 text-primary"></i>
-                </div>
-                <h4 class="title mb-2">
-                  <a
-                    href="services-details.html"
-                    class="stretched-link text-dark"
-                    >Accompagnement Pastoral</a
-                  >
-                </h4>
-                <p class="description text-muted">
-                  Recevez conseil, soutien et prière de nos pasteurs et leaders.
-                </p>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div
-                class="service-card h-100 text-center p-4 shadow-sm rounded-3"
-              >
-                <div class="icon mb-3">
-                  <i class="bi bi-cross display-4 text-primary"></i>
-                </div>
-                <h4 class="title mb-2">
-                  <a
-                    href="services-details.html"
-                    class="stretched-link text-dark"
-                    >Ministère de Guérison & Délivrance</a
-                  >
-                </h4>
-                <p class="description text-muted">
-                  Des moments dédiés à la prière pour la guérison, la
-                  restauration et la liberté spirituelle.
-                </p>
-              </div>
-            </div>
+      <div class="col" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark">
+          <div class="icon mb-3">
+            <i class="bi bi-calendar-event display-4 text-primary"></i>
           </div>
+          <h4 class="title mb-2">
+            <a href="services-details.html" class="stretched-link text-dark">Événements Communautaires</a>
+          </h4>
+          <p class="description text-muted">
+            Découvrez nos événements spéciaux, concerts, conférences et
+            rassemblements.
+          </p>
         </div>
-      </section>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark">
+          <div class="icon mb-3">
+            <i class="bi bi-hand-heart display-4 text-primary"></i>
+          </div>
+          <h4 class="title mb-2">
+            <a href="services-details.html" class="stretched-link text-dark">Ministère d'Aide Sociale</a>
+          </h4>
+          <p class="description text-muted">
+            Nous aidons les personnes dans le besoin à Goma, en offrant
+            soutien et ressources.
+          </p>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark">
+          <div class="icon mb-3">
+            <i class="bi bi-person-check display-4 text-primary"></i>
+          </div>
+          <h4 class="title mb-2">
+            <a href="services-details.html" class="stretched-link text-dark">Accompagnement Pastoral</a>
+          </h4>
+          <p class="description text-muted">
+            Recevez conseil, soutien et prière de nos pasteurs et leaders.
+          </p>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-card h-100 text-center p-4 shadow-sm rounded-3 bg-white text-dark">
+          <div class="icon mb-3">
+            <i class="bi bi-cross display-4 text-primary"></i>
+          </div>
+          <h4 class="title mb-2">
+            <a href="services-details.html" class="stretched-link text-dark">Ministère de Guérison & Délivrance</a>
+          </h4>
+          <p class="description text-muted">
+            Des moments dédiés à la prière pour la guérison, la
+            restauration et la liberté spirituelle.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       <!-- About Section -->
       <section id="about" class="about section">
         <div class="content">
@@ -932,16 +663,21 @@
           <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
               <a href="index.html" class="logo d-flex align-items-center">
-                <span class="sitename">Bon Berger</span>
+                <span class="sitename"></span>
               </a>
               <div class="footer-contact pt-3">
                 <p>123 Rue de la Foi</p>
                 <p>Goma, Nord-Kivu, RDC</p>
                 <p class="mt-3">
-                  <strong>Téléphone:</strong> <span>+243 812 345 678</span>
+                  <strong>Téléphone:</strong>
+                  <span></span>
+                    <br />
+                    +243 997 763 394 <br />+243 844 180 646 <br />
+                    +243 995 477 739</span
+                  >
                 </p>
                 <p>
-                  <strong>Email:</strong> <span>contact@bonberger.org</span>
+                  <strong>Email:</strong> <span>communaute_cepr@gmail.com</span>
                 </p>
               </div>
             </div>
@@ -975,7 +711,6 @@
                 <li><a href="#">Témoignages</a></li>
                 <li><a href="#">Galerie Photos</a></li>
                 <li><a href="#">Partenaires</a></li>
-                <li><a href="#">Dons</a></li>
               </ul>
             </div>
 
@@ -986,7 +721,6 @@
                 <li><a href="#">Nos Valeurs</a></li>
                 <li><a href="#">Leadership</a></li>
                 <li><a href="#">Histoire de l'Église</a></li>
-                <li><a href="#">Actualités</a></li>
               </ul>
             </div>
           </div>
@@ -1005,7 +739,8 @@
               >. Tous droits réservés
             </div>
             <div class="credits">
-              Conçu par <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              Conçu par
+              <a href="https://jeanlucndato.github.io/resume/">jeanlucndato</a>
             </div>
           </div>
 
