@@ -288,6 +288,87 @@ h6 {
 
 /* fin de limage de jesus */
 
+/*--------------------------------------------------------------
+# Section: Philosophie / Nos Valeurs
+--------------------------------------------------------------*/
+.philosophy-section {
+  background-color: var(--background-color);
+  /* Utilise votre couleur de fond principale */
+}
+
+.philosophy-section .section-title h2 {
+  color: var(--heading-color);
+  /* Utilise votre couleur de titre */
+}
+
+.philosophy-section .section-title p {
+  color: var(--default-color);
+  /* Utilise votre couleur de texte par défaut */
+}
+
+.philosophy-section .feature-card {
+  background-color: var(--surface-color);
+  /* Utilise votre couleur de surface pour le fond de la carte */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Bordure subtile pour un aspect plus défini */
+  transition: all 0.3s ease-in-out;
+  /* Transition pour les effets de survol */
+}
+
+.philosophy-section .feature-card:hover {
+  transform: translateY(-8px);
+  /* Soulève la carte légèrement au survol */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Ombre plus prononcée au survol */
+}
+
+.philosophy-section .feature-card .icon {
+  width: 80px;
+  /* Taille fixe pour l'icône */
+  height: 80px;
+  /* Taille fixe pour l'icône */
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  /* Fond d'icône plus clair avec la couleur accent */
+  border-radius: 50%;
+  /* Rend l'icône ronde */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+  /* Centre l'icône et ajoute de la marge en bas */
+  transition: all 0.3s ease-in-out;
+}
+
+.philosophy-section .feature-card:hover .icon {
+  background-color: var(--accent-color);
+  /* Change le fond de l'icône au survol */
+}
+
+.philosophy-section .feature-card .icon i {
+  color: var(--accent-color);
+  /* Couleur de l'icône elle-même */
+  transition: all 0.3s ease-in-out;
+}
+
+.philosophy-section .feature-card:hover .icon i {
+  color: var(--contrast-color);
+  /* Change la couleur de l'icône en couleur de contraste au survol (généralement blanc) */
+}
+
+.philosophy-section .feature-card h4 {
+  color: var(--heading-color);
+  /* Utilise votre couleur de titre pour les titres de carte */
+}
+
+.philosophy-section .feature-card p {
+  color: var(--default-color);
+  /* Utilise votre couleur de texte par défaut pour les paragraphes */
+  line-height: 1.6;
+  /* Améliore la lisibilité du texte */
+  font-size: 15px;
+  /* Ajuste la taille de la police si nécessaire */
+}
+
 .pulsating-play-btn:after {
   content: "";
   position: absolute;
