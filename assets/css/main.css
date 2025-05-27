@@ -177,6 +177,117 @@ h6 {
   background: rgba(198, 16, 0, 0);
 }
 
+/* Styles pour la galerie */
+.gallery-item {
+  /* ... */
+  overflow: hidden;
+  /* Important pour que le zoom ne déborde pas */
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease;
+  /* Animation pour l'effet de zoom sur l'image */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+  /* Légère mise à l'échelle au survol */
+}
+
+.zoom-icon {
+  /* ... */
+  opacity: 0;
+  /* Caché par défaut */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* Animation pour l'apparition et le mouvement */
+}
+
+.gallery-item:hover .zoom-icon {
+  opacity: 1;
+  /* Apparaît au survol */
+  transform: translate(-50%, -50%) scale(1.1);
+  /* Légère mise à l'échelle au survol */
+}
+
+/* Styles pour la section de prédication */
+.sermon-section {
+  background-color: var(--background-color);
+  /* Utilise la couleur de fond par défaut */
+}
+
+.sermon-section .section-title h2 {
+  color: var(--heading-color);
+  /* Utilise la couleur de titre par défaut */
+}
+
+.sermon-section .section-title p {
+  color: var(--default-color);
+  /* Utilise la couleur de texte par défaut */
+}
+
+.sermon-section .card {
+  background-color: var(--surface-color);
+  /* Utilise la couleur de surface pour la carte */
+  border-color: var(--surface-color);
+  /* Assure que la bordure est assortie ou absente */
+}
+
+.sermon-section .card-title {
+  color: var(--heading-color);
+  /* Les titres à l'intérieur de la carte */
+}
+
+.sermon-section .card-text {
+  color: var(--default-color);
+  /* Texte principal de la prédication */
+  line-height: 1.8;
+  /* Améliore la lisibilité */
+}
+
+.sermon-section .card-text em {
+  color: var(--accent-color);
+  /* Met en évidence les versets bibliques en couleur accent */
+}
+
+.sermon-section .prayer-box {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  /* Fond de la boîte de prière */
+  border-color: var(--accent-color);
+  /* Bordure de la boîte de prière */
+}
+
+.sermon-section .prayer-box p {
+  color: var(--default-color);
+  /* Texte de la prière */
+}
+
+.sermon-section .prayer-box p.lead {
+  color: var(--default-color);
+  /* Texte "Répétez cette prière..." */
+}
+
+/* l'imga e de jesus */
+/* Nouveau style pour le conteneur de l'image de prédication dans la section sermon */
+.sermon-image-container {
+  max-width: 600px;
+  /* Limite la largeur de l'image pour qu'elle ne soit pas trop grande */
+  margin-left: auto;
+  /* Centre le conteneur d'image */
+  margin-right: auto;
+  /* Centre le conteneur d'image */
+  text-align: center;
+  /* Centre l'image si elle est plus petite que le max-width */
+}
+
+.sermon-image-container img {
+  width: 100%;
+  /* Assure que l'image prend toute la largeur disponible dans son conteneur */
+  height: auto;
+  /* Maintient le ratio d'aspect */
+}
+
+/* fin de limage de jesus */
+
 .pulsating-play-btn:after {
   content: "";
   position: absolute;
