@@ -2078,6 +2078,8 @@ section,
   }
 }
 
+/* fin du programme */
+
 /*--------------------------------------------------------------
 # Recent Posts Section
 --------------------------------------------------------------*/
@@ -3105,4 +3107,326 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Œuvres Sociales (Apparence des cartes)
+--------------------------------------------------------------*/
+.oeuvres-sociales .oeuvre-card {
+  padding: 30px;
+  background: var(--surface-color);
+  /* Couleur de fond de la carte */
+  border-radius: 10px;
+  /* Bords arrondis */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* Ombre douce pour la profondeur */
+  transition: all 0.3s ease-in-out;
+  /* Transition fluide pour les effets de survol */
+  text-align: center;
+  /* Centrer le contenu du texte */
+  height: 100%;
+  /* Assure que toutes les cartes ont la même hauteur dans une rangée */
+  display: flex;
+  /* Utilise flexbox pour l'alignement interne */
+  flex-direction: column;
+  /* Organise le contenu en colonne */
+  justify-content: space-between;
+  /* Espace entre les éléments (icône, titre, texte, détails) */
+}
+
+.oeuvres-sociales .oeuvre-card:hover {
+  transform: translateY(-8px);
+  /* Légère élévation au survol */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  /* Ombre plus prononcée au survol */
+  border-color: var(--accent-color);
+  /* Changement de couleur de bordure au survol */
+}
+
+.oeuvres-sociales .oeuvre-card .icon {
+  margin: 0 auto 20px auto;
+  /* Centre l'icône et ajoute une marge en bas */
+  width: 70px;
+  height: 70px;
+  background: var(--accent-color);
+  /* Couleur de fond de l'icône */
+  border-radius: 50%;
+  /* Rend le fond circulaire */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.oeuvres-sociales .oeuvre-card .icon i {
+  color: var(--contrast-color);
+  /* Couleur de l'icône (blanc sur fond rouge) */
+  font-size: 32px;
+  /* Taille de l'icône */
+  line-height: 0;
+  /* Ajustement vertical */
+}
+
+.oeuvres-sociales .oeuvre-card h4 {
+  font-size: 22px;
+  /* Taille du titre */
+  font-weight: 700;
+  /* Poids de la police du titre */
+  margin-bottom: 15px;
+  /* Marge sous le titre */
+  color: var(--heading-color);
+  /* Couleur du titre */
+}
+
+.oeuvres-sociales .oeuvre-card h4 a {
+  color: var(--heading-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.oeuvres-sociales .oeuvre-card h4 a:hover {
+  color: var(--accent-color);
+  /* Couleur du titre au survol */
+}
+
+.oeuvres-sociales .oeuvre-card p {
+  font-size: 15px;
+  /* Taille du paragraphe */
+  color: var(--default-color);
+  /* Couleur du texte du paragraphe */
+  line-height: 1.6;
+  /* Hauteur de ligne pour une meilleure lisibilité */
+  margin-bottom: 20px;
+  /* Marge sous le paragraphe */
+  flex-grow: 1;
+  /* Permet au paragraphe de prendre l'espace disponible */
+}
+
+.oeuvres-sociales .oeuvre-card .details {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  /* Couleur du texte des détails */
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* Ligne de séparation */
+  padding-top: 15px;
+  /* Espacement au-dessus de la ligne */
+  font-weight: 500;
+}
+
+.oeuvres-sociales .oeuvre-card .details b {
+  color: var(--heading-color);
+  /* Rendre l'objectif plus foncé */
+}
+
+/* Styles pour les flèches du carrousel Bootstrap (pour les petits écrans) */
+.oeuvres-sociales .carousel-control-prev,
+.oeuvres-sociales .carousel-control-next {
+  width: 5%;
+  /* Réduire la largeur des zones de clic des flèches */
+  opacity: 0.8;
+  /* Opacité des flèches */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.oeuvres-sociales .carousel-control-prev:hover,
+.oeuvres-sociales .carousel-control-next:hover {
+  opacity: 1;
+  /* Opacité pleine au survol */
+}
+
+.oeuvres-sociales .carousel-control-prev-icon,
+.oeuvres-sociales .carousel-control-next-icon {
+  background-color: var(--accent-color);
+  /* Couleur de fond de l'icône de flèche */
+  border-radius: 50%;
+  /* Rendre les icônes de flèches rondes */
+  padding: 15px;
+  /* Taille des icônes de flèches */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.oeuvres-sociales .carousel-control-prev-icon:hover,
+.oeuvres-sociales .carousel-control-next-icon:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  /* Assombrir au survol */
+}
+
+/* Ajustement pour les marges du carrousel sur petits écrans pour un meilleur rendu */
+.oeuvres-sociales #oeuvresCarousel .carousel-item {
+  padding: 0 15px;
+  /* Ajouter un petit padding sur les côtés des éléments du carrousel */
+}
+
+/* S'assurer que les cartes dans le carrousel sur petits écrans sont bien centrées et espacées */
+.oeuvres-sociales #oeuvresCarousel .oeuvre-card {
+  margin: 0 auto;
+  /* Centrer la carte dans le slide */
+  max-width: 350px;
+  /* Limiter la largeur de la carte pour éviter qu'elle soit trop grande sur certains mobiles */
+}
+
+/*--------------------------------------------------------------
+# Organigramme (Apparence des cartes Team)
+--------------------------------------------------------------*/
+.team-15 .person {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  background: var(--surface-color);
+  /* Couleur de fond de la carte */
+  height: 100%;
+  /* Assure que toutes les cartes ont la même hauteur dans une rangée */
+  display: flex;
+  flex-direction: column;
+}
+
+.team-15 .person:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team-15 .person figure {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  /* Arrondir juste le haut de l'image */
+}
+
+.team-15 .person figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-15 .person:hover figure img {
+  transform: scale(1.05);
+  /* Zoom léger de l'image au survol */
+}
+
+.team-15 .person .social {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  /* Aligner les icônes social verticalement */
+  gap: 8px;
+  /* Espacement entre les icônes */
+}
+
+.team-15 .person:hover .social {
+  opacity: 1;
+  /* Afficher les icônes social au survol */
+}
+
+.team-15 .person .social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  /* Fond blanc semi-transparent */
+  color: var(--accent-color);
+  /* Couleur des icônes */
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-15 .person .social a:hover {
+  background: var(--accent-color);
+  /* Fond accentué au survol */
+  color: var(--contrast-color);
+  /* Texte blanc au survol */
+}
+
+.team-15 .person .social i {
+  font-size: 18px;
+}
+
+.team-15 .person-contents {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  /* Permet au contenu de prendre l'espace restant */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Centrer le contenu verticalement */
+}
+
+.team-15 .person-contents h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--heading-color);
+}
+
+.team-15 .person-contents .position {
+  font-size: 14px;
+  color: var(--accent-color);
+  /* Couleur accent pour le poste */
+  display: block;
+  margin-bottom: 10px;
+}
+
+.team-15 .person-contents .description {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+
+/* Styles pour les flèches du carrousel Bootstrap (pour les petits écrans) */
+.team-15 .carousel-control-prev,
+.team-15 .carousel-control-next {
+  width: 5%;
+  /* Réduire la largeur des zones de clic des flèches */
+  opacity: 0.8;
+  /* Opacité des flèches */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.team-15 .carousel-control-prev:hover,
+.team-15 .carousel-control-next:hover {
+  opacity: 1;
+  /* Opacité pleine au survol */
+}
+
+.team-15 .carousel-control-prev-icon,
+.team-15 .carousel-control-next-icon {
+  background-color: var(--accent-color);
+  /* Couleur de fond de l'icône de flèche */
+  border-radius: 50%;
+  /* Rendre les icônes de flèches rondes */
+  padding: 15px;
+  /* Taille des icônes de flèches */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.team-15 .carousel-control-prev-icon:hover,
+.team-15 .carousel-control-next-icon:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  /* Assombrir au survol */
+}
+
+/* S'assurer que les cartes dans le carrousel sur petits écrans sont bien centrées et espacées */
+.team-15 #organigrammeCarousel .carousel-item {
+  padding: 0 15px;
+  /* Ajouter un petit padding sur les côtés des éléments du carrousel */
+}
+
+.team-15 #organigrammeCarousel .person {
+  margin: 0 auto;
+  /* Centrer la carte dans le slide */
+  max-width: 320px;
+  /* Limiter la largeur de la carte pour éviter qu'elle soit trop grande sur certains mobiles */
 }
