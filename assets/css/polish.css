@@ -1,0 +1,353 @@
+/* =========================================================================
+   CEPR-BonBerger - Polish & Modernization CSS
+   Strict Palette: #000000 (Black), #FF0000 (Red), #ffffff (White)
+   ========================================================================= */
+
+/* --- 1. Global Polish --- */
+::selection {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c50000;
+}
+
+/* Section Titles Polish */
+.section-title h2 {
+  position: relative;
+  display: inline-block;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+.section:hover .section-title h2::after {
+  width: 50%;
+}
+
+/* --- 2. Header & Navigation --- */
+.header {
+  transition: all 0.3s ease-in-out;
+}
+.scrolled .header {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 2px solid var(--accent-color);
+}
+.dark-background.scrolled .header,
+body.dark-background .scrolled .header {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.header .logo h1 {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.header .logo:hover h1 {
+  transform: scale(1.02);
+  color: var(--accent-color);
+}
+
+@media (min-width: 1200px) {
+  .navmenu a {
+    position: relative;
+  }
+  .navmenu a::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+  }
+  .navmenu a:hover::after,
+  .navmenu .active::after {
+    width: calc(100% - 30px);
+  }
+}
+
+/* --- 3. Hero Section --- */
+.hero .carousel-item:before {
+  /* Enhance readability with a stronger gradient overlay */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+}
+
+.hero .carousel-container h2 {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.hero .carousel-container p {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  font-size: 1.1rem;
+}
+
+.hero .carousel-indicators {
+  margin-bottom: 2rem;
+}
+.hero .carousel-indicators li {
+  width: 30px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hero .carousel-indicators .active {
+  background-color: var(--accent-color);
+  width: 40px;
+}
+
+.hero .carousel-control-prev-icon,
+.hero .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+.hero .carousel-control-prev:hover .carousel-control-prev-icon,
+.hero .carousel-control-next:hover .carousel-control-next-icon {
+  background-color: var(--accent-color);
+}
+
+/* --- 4. Feature Cards & Ministries --- */
+.feature-card {
+  border-top: 3px solid transparent;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.feature-card:hover {
+  border-top-color: var(--accent-color);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 0, 0, 0.05); /* very subtle red tint in shadow */
+}
+.feature-card .icon {
+  transition: transform 0.4s ease, background-color 0.4s ease;
+}
+.feature-card:hover .icon {
+  transform: scale(1.15) rotate(5deg);
+  background-color: var(--accent-color);
+}
+.feature-card:hover .icon i {
+  color: var(--contrast-color) !important;
+}
+
+/* --- 5. Service Carousel (Swiper) --- */
+.service-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+.service-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+  z-index: 1;
+}
+.service-item-contents {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  padding: 25px;
+  width: 100%;
+}
+.service-item-category {
+  color: var(--accent-color);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  display: block;
+}
+.service-item-title {
+  color: var(--contrast-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+.navigation-prev,
+.navigation-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--contrast-color);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.navigation-prev:hover,
+.navigation-next:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* --- 6. FAQ Accordion --- */
+.accordion-item {
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+.accordion-button {
+  font-weight: 600;
+  padding: 20px 25px;
+  background-color: var(--surface-color);
+  color: var(--heading-color);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+.accordion-button:not(.collapsed) {
+  background-color: color-mix(in srgb, var(--surface-color), #000 3%);
+  color: var(--accent-color);
+  border-left-color: var(--accent-color);
+  box-shadow: none;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button::after {
+  transition: transform 0.4s ease;
+}
+.accordion-body {
+  background-color: var(--surface-color);
+  padding: 20px 25px;
+  color: var(--default-color);
+  line-height: 1.8;
+}
+.dark-background .accordion-button:not(.collapsed) {
+  background-color: color-mix(in srgb, var(--surface-color), #fff 5%);
+}
+
+/* --- 7. Contact Form --- */
+.php-email-form .form-control {
+  border-radius: 6px;
+  padding: 12px 15px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  transition: all 0.3s ease;
+  background-color: var(--surface-color);
+  color: var(--default-color);
+}
+.php-email-form .form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.15);
+}
+.php-email-form button[type="submit"] {
+  background: var(--accent-color);
+  border: 0;
+  padding: 14px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.php-email-form button[type="submit"]:hover {
+  background: #c50000;
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* --- 8. Footer --- */
+.footer-top {
+  border-top: 3px solid var(--accent-color);
+}
+.footer .social-links a {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.footer .social-links a:hover {
+  transform: scale(1.2) translateY(-3px);
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+.footer .footer-links ul a {
+  position: relative;
+  transition: color 0.3s;
+}
+.footer .footer-links ul a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+.footer .footer-links ul a:hover::after {
+  width: 100%;
+}
+
+/* --- 9. Scroll Top Button --- */
+.scroll-top {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background-color: var(--accent-color);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+.scroll-top:hover {
+  background-color: #c50000;
+  transform: translateY(-5px);
+}
+
+/* --- 10. Oeuvres Sociales specific enhancements --- */
+.oeuvres-sociales .oeuvre-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-bottom: 3px solid transparent;
+  border-radius: 12px;
+  background-color: var(--surface-color);
+  padding: 30px;
+  height: 100%;
+}
+.oeuvres-sociales .oeuvre-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-bottom-color: var(--accent-color);
+}
+.oeuvres-sociales .oeuvre-card .icon {
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+.oeuvres-sociales .oeuvre-card:hover .icon {
+  transform: scale(1.2) rotate(15deg);
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+.oeuvres-sociales .oeuvre-card a {
+  transition: color 0.3s ease;
+}
+.oeuvres-sociales .oeuvre-card:hover a {
+  color: var(--accent-color);
+}
